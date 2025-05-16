@@ -11,15 +11,11 @@
       "RelativeMoniker": "D:0:0:{A4E53D19-EB60-4076-BFA2-74259B42B216}|UploadingMinIO\\UploadingMinIO.csproj|solutionrelative:uploadingminio\\frmcore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4E53D19-EB60-4076-BFA2-74259B42B216}|UploadingMinIO\\UploadingMinIO.csproj|c:\\workpace\\windowform\\uploadingminio\\uploadingminio\\frmcore.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A4E53D19-EB60-4076-BFA2-74259B42B216}|UploadingMinIO\\UploadingMinIO.csproj|C:\\Workpace\\WindowForm\\UploadingMinIO\\uploadingminio\\frmcore.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A4E53D19-EB60-4076-BFA2-74259B42B216}|UploadingMinIO\\UploadingMinIO.csproj|solutionrelative:uploadingminio\\frmcore.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|UploadingMinIO||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A4E53D19-EB60-4076-BFA2-74259B42B216}|UploadingMinIO\\UploadingMinIO.csproj|c:\\workpace\\windowform\\uploadingminio\\uploadingminio\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
-      "RelativeMoniker": "D:0:0:{A4E53D19-EB60-4076-BFA2-74259B42B216}|UploadingMinIO\\UploadingMinIO.csproj|solutionrelative:uploadingminio\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -41,8 +37,7 @@
               "RelativeToolTip": "UploadingMinIO\\frmCore.Designer.cs",
               "ViewState": "AgIAAGEAAAAAAAAAAAAnwHIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T14:00:21.845Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T14:00:21.845Z"
             },
             {
               "$type": "Document",
@@ -53,8 +48,7 @@
               "ToolTip": "C:\\Workpace\\WindowForm\\UploadingMinIO\\UploadingMinIO\\UploadingMinIO.csproj",
               "RelativeToolTip": "UploadingMinIO\\UploadingMinIO.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-06T14:14:01.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T14:14:01.013Z"
             },
             {
               "$type": "Document",
@@ -64,7 +58,7 @@
               "RelativeDocumentMoniker": "UploadingMinIO\\frmCore.cs",
               "ToolTip": "C:\\Workpace\\WindowForm\\UploadingMinIO\\UploadingMinIO\\frmCore.cs",
               "RelativeToolTip": "UploadingMinIO\\frmCore.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQBAABxAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T14:28:46.861Z",
               "EditorCaption": ""
@@ -78,8 +72,7 @@
               "ToolTip": "C:\\Workpace\\WindowForm\\UploadingMinIO\\UploadingMinIO\\frmCore.cs [Design]",
               "RelativeToolTip": "UploadingMinIO\\frmCore.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T08:21:08.837Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-04T08:21:08.837Z"
             }
           ]
         }

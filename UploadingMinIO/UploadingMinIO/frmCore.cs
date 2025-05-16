@@ -26,7 +26,7 @@ namespace UploadingMinIO
         public string endPoint = "api.truyenhub.cloud";
         public string accessKey = "p2AeorPsoPsLJnduzQvw";
         public string secretKey = "WdZZ8NhM0YE6UdcR77l3L22qGbLpHCTkdfkhXibc";
-        public string myBucket = "test-bucket";
+        public string myBucket = "truyenhub";
         public string myConnectionString = "";
         public string folderPosterName = "";
         public bool isUploaded = false;
