@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCore));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -52,11 +53,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelDragandDrop = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.rTxtBoxLog = new System.Windows.Forms.RichTextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -78,7 +80,7 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(325, 445);
+            this.panel1.Size = new System.Drawing.Size(398, 454);
             this.panel1.TabIndex = 0;
             // 
             // groupBox2
@@ -88,7 +90,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(6, 370);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(313, 69);
+            this.groupBox2.Size = new System.Drawing.Size(386, 69);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tác vụ";
@@ -121,7 +123,7 @@
             this.groupBox4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(6, 115);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(313, 82);
+            this.groupBox4.Size = new System.Drawing.Size(386, 82);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông tin MinIO Server";
@@ -175,7 +177,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(6, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(313, 102);
+            this.groupBox3.Size = new System.Drawing.Size(386, 102);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin DB Server";
@@ -247,16 +249,16 @@
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(6, 207);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(316, 157);
+            this.groupBox1.Size = new System.Drawing.Size(386, 157);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cài đặt thông tin";
             // 
             // pBfolderStatus
             // 
-            this.pBfolderStatus.Location = new System.Drawing.Point(248, 41);
+            this.pBfolderStatus.Location = new System.Drawing.Point(351, 41);
             this.pBfolderStatus.Name = "pBfolderStatus";
-            this.pBfolderStatus.Size = new System.Drawing.Size(59, 24);
+            this.pBfolderStatus.Size = new System.Drawing.Size(29, 24);
             this.pBfolderStatus.TabIndex = 3;
             this.pBfolderStatus.TabStop = false;
             // 
@@ -266,15 +268,20 @@
             this.cBFolerName.FormattingEnabled = true;
             this.cBFolerName.Location = new System.Drawing.Point(9, 41);
             this.cBFolerName.Name = "cBFolerName";
-            this.cBFolerName.Size = new System.Drawing.Size(229, 24);
+            this.cBFolerName.Size = new System.Drawing.Size(336, 24);
             this.cBFolerName.TabIndex = 2;
+            this.cBFolerName.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.cBFolerName_DrawItem);
+            this.cBFolerName.DropDownClosed += new System.EventHandler(this.cBFolerName_DropDownClosed);
             this.cBFolerName.TextChanged += new System.EventHandler(this.cBFolerName_TextChanged);
+            this.cBFolerName.MouseLeave += new System.EventHandler(this.cBFolerName_MouseLeave);
+            this.cBFolerName.MouseHover += new System.EventHandler(this.cBFolerName_MouseHover);
+            this.cBFolerName.MouseMove += new System.Windows.Forms.MouseEventHandler(this.cBFolerName_MouseMove);
             // 
             // txtFilename
             // 
             this.txtFilename.Location = new System.Drawing.Point(9, 102);
             this.txtFilename.Name = "txtFilename";
-            this.txtFilename.Size = new System.Drawing.Size(304, 47);
+            this.txtFilename.Size = new System.Drawing.Size(371, 47);
             this.txtFilename.TabIndex = 1;
             this.txtFilename.Text = "";
             // 
@@ -305,10 +312,20 @@
             this.panelDragandDrop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panelDragandDrop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelDragandDrop.Controls.Add(this.label6);
-            this.panelDragandDrop.Location = new System.Drawing.Point(343, 12);
+            this.panelDragandDrop.Location = new System.Drawing.Point(416, 12);
             this.panelDragandDrop.Name = "panelDragandDrop";
-            this.panelDragandDrop.Size = new System.Drawing.Size(495, 445);
+            this.panelDragandDrop.Size = new System.Drawing.Size(538, 454);
             this.panelDragandDrop.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(152, 308);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(195, 19);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Kéo thả media vào đây";
             // 
             // openFileDialog1
             // 
@@ -321,7 +338,7 @@
             this.panel2.Controls.Add(this.groupBox5);
             this.panel2.Location = new System.Drawing.Point(12, 461);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(825, 118);
+            this.panel2.Size = new System.Drawing.Size(941, 118);
             this.panel2.TabIndex = 1;
             // 
             // groupBox5
@@ -331,7 +348,7 @@
             this.groupBox5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(0, 0);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(825, 118);
+            this.groupBox5.Size = new System.Drawing.Size(941, 118);
             this.groupBox5.TabIndex = 2;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Logs";
@@ -341,25 +358,15 @@
             this.rTxtBoxLog.Location = new System.Drawing.Point(10, 18);
             this.rTxtBoxLog.Name = "rTxtBoxLog";
             this.rTxtBoxLog.ReadOnly = true;
-            this.rTxtBoxLog.Size = new System.Drawing.Size(809, 94);
+            this.rTxtBoxLog.Size = new System.Drawing.Size(925, 94);
             this.rTxtBoxLog.TabIndex = 0;
             this.rTxtBoxLog.Text = "";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(152, 308);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(195, 19);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Kéo thả media vào đây";
             // 
             // frmCore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 582);
+            this.ClientSize = new System.Drawing.Size(966, 591);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelDragandDrop);
             this.Controls.Add(this.panel1);
@@ -417,5 +424,6 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.RichTextBox rTxtBoxLog;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

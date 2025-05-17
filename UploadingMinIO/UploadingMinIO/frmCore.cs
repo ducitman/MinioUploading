@@ -18,6 +18,8 @@ using MongoDB.Libmongocrypt;
 using Minio.DataModel.Args;
 using Minio.ApiEndpoints;
 using System.Reactive.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Runtime.InteropServices;
 
 namespace UploadingMinIO
 {
@@ -33,6 +35,13 @@ namespace UploadingMinIO
         public IMinioClient minioClient;
         private IMongoDatabase _database;
         private IMongoCollection<BsonDocument> _collection;
+
+        // Windows API để gửi thông điệp đến ComboBox
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        private static extern IntPtr SendMessage(IntPtr hWnd, int msg, IntPtr wParam, IntPtr lParam);
+
+        private const int LB_ITEMFROMPOINT = 0x01A9; // Lấy chỉ số item từ tọa độ chuột
+
         public frmCore()
         {
             InitializeComponent();
@@ -40,6 +49,12 @@ namespace UploadingMinIO
 
             panelDragandDrop.DragEnter += PanelDragandDrop_DragEnter;
             panelDragandDrop.DragDrop += PanelDragandDrop_DragDrop;
+            var toolTip = toolTip1;
+            toolTip.AutoPopDelay = 5000; // Thời gian hiển thị ToolTip (ms)
+            toolTip.InitialDelay = 200;  // Thời gian chờ trước khi hiển thị
+            toolTip.ReshowDelay = 200;   // Thời gian chờ khi di chuột sang item khác
+
+            cBFolerName.DropDownClosed += cBFolerName_DropDownClosed;
         }   
 
         private void PanelDragandDrop_DragDrop(object sender, DragEventArgs e)
@@ -448,6 +463,42 @@ namespace UploadingMinIO
         private void frmCore_FormClosing(object sender, FormClosingEventArgs e)
         {
             
+        }
+
+        private void cBFolerName_MouseMove(object sender, MouseEventArgs e)
+        {
+            System.Windows.Forms.ComboBox combo = sender as System.Windows.Forms.ComboBox;
+
+            // Kiểm tra nếu cbFoldername.Text không trống
+            if (!string.IsNullOrEmpty(combo.Text))
+            {
+                toolTip1.SetToolTip(combo, combo.Text); // Hiển thị toàn bộ cbFoldername.Text
+            }
+            else
+            {
+                toolTip1.SetToolTip(combo, null); // Không hiển thị ToolTip nếu Text trống
+            }
+        }
+
+        private void cBFolerName_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            
+        }
+
+        private void cBFolerName_DropDownClosed(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cBFolerName_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cBFolerName_MouseLeave(object sender, EventArgs e)
+        {
+            // Xóa ToolTip khi chuột rời khỏi ComboBox
+            toolTip1.SetToolTip(cBFolerName, null);
         }
     }
 }
